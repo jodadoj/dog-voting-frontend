@@ -19,7 +19,8 @@
     "test": "react-scripts test --watchAll=false",
     "test:watch": "react-scripts test",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -45,7 +46,12 @@
     "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^8.31.0",
     "eslint-plugin-react": "^7.31.11",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "prettier": "2.8.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }

@@ -4,7 +4,9 @@ import "./App.css"
 //--------------------------------------------------------------------------------the definition of the base URL
 
 export const baseUrl: string =
-  process.env.NODE_ENV === "production" ? "https://dog-voting-db.onrender.com/" : "http://localhost:4000/";
+  process.env.NODE_ENV === "production"
+    ? "https://dog-voting-db.onrender.com/"
+    : "http://localhost:4000/";
 
 // {
 //   const keepingThis = "https://images.dog.ceo/breeds/"

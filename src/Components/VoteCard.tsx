@@ -5,9 +5,14 @@ interface IVoteCardProps {
   handleVoteClick: (breed: string) => Promise<void>;
 }
 
-export function VoteCard({DoggyData, handleVoteClick}: IVoteCardProps): JSX.Element {
-  console.log("DoggyData", DoggyData)
- const combinedBreed = DoggyData.subBreed ? DoggyData.breed + " " + DoggyData.subBreed : DoggyData.breed;
+export function VoteCard({
+  DoggyData,
+  handleVoteClick,
+}: IVoteCardProps): JSX.Element {
+  console.log("DoggyData", DoggyData);
+  const combinedBreed = DoggyData.subBreed
+    ? DoggyData.breed + " " + DoggyData.subBreed
+    : DoggyData.breed;
 
   return (
     <div className="ctn-vote-card">
