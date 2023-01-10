@@ -1,10 +1,3 @@
-
-
-export function TopDog():JSX.Element{
-
-    return (
-        <>
-        Top Dog
-        </>
-    );
+export function TopDog(): JSX.Element {
+  return <>Top Dog</>;
 }
