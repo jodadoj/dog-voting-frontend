@@ -1,4 +1,3 @@
-import { VoteCard } from "./Components/VoteCard";
 import { VotePage } from "./Pages/VotePage";
 
 //--------------------------------------------------------------------------------the definition of the base URL
