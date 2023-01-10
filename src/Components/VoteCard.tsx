@@ -17,8 +17,8 @@ export function VoteCard({DoggyData, handleVoteClick}: IVoteCardProps): JSX.Elem
       />
       <p>{DoggyData.breed}</p>
       <button
-        // onClick={() => handleVoteClick(combinedBreed)}
-        onClick={() => console.log("Button Clicked")}
+        onClick={() => handleVoteClick(combinedBreed)}
+        // onClick={() => console.log("Button Clicked")}
       >
         Vote for {DoggyData.breed}!
       </button>

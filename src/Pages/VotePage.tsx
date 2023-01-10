@@ -34,8 +34,8 @@ export function VotePage(): JSX.Element {
 
   //HANDLERS
   const handleVoteClick = async (breed: string) => {
-    await axios.post(baseUrl + "/leaderboard", {"breed": breed});
-    await axios.put(baseUrl + "/leaderboard/" + breed);
+    await axios.post(baseUrl + "leaderboard", {"breed": breed});
+    await axios.put(baseUrl + "leaderboard/" + breed);
     fetchBothDogs();
   }
 
