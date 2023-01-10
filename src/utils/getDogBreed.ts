@@ -1,12 +1,16 @@
 import { IDogDataFromAPI, IDogDataWithBreed } from "../interfaces";
 
-    export function getDogBreed(DogData:IDogDataFromAPI):IDogDataWithBreed{
-        
-        const imgURL = DogData.message;
+export function getDogBreed(DogData: IDogDataFromAPI): IDogDataWithBreed {
+  const imgURL = DogData.message;
+  const imgURLArr = imgURL.split("/");
+  const splitBreedArr = imgURLArr[4].split("-");
+  const subBreed = splitBreedArr.length > 1 ? splitBreedArr[1] : null;
+  const breed = splitBreedArr[0];
 
-        return 
-    }
-
-    // "https://images.dog.ceo/breeds/spaniel-brittany/n02101388_197.jpg"
-    // "https://images.dog.ceo/breeds/leonberg/n02111129_3045.jpg",
-// 
+  return {
+    message: DogData.message,
+    status: DogData.status,
+    breed: breed,
+    subBreed: subBreed,
+  };
+}

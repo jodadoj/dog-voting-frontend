@@ -1,10 +1,3 @@
-
-
-export function LeaderboardPage():JSX.Element{
-
-    return (
-        <>
-        Leaderboard Page
-        </>
-    );
+export function LeaderboardPage(): JSX.Element {
+  return <>Leaderboard Page</>;
 }
