@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
+import { baseUrl } from "../App";
+import { VoteCard } from "../Components/VoteCard";
 import { IDogDataWithBreed } from "../interfaces";
 import { getDogBreed } from "../utils/getDogBreed";
 
@@ -7,8 +9,9 @@ export function VotePage(): JSX.Element {
   const [dogDataArray, setDogDataArray] = useState<IDogDataWithBreed[]>([]);
 
   async function getDogData() {
+    console.log("get Dog Data is RUNNING")
     const { data } = await axios.get("https://dog.ceo/api/breeds/image/random");
-    console.log("data", data)
+    console.log("DATA", data)
     return data;
   }
 
@@ -20,16 +23,33 @@ export function VotePage(): JSX.Element {
     while (firstDog.breed === secondDog.breed && firstDog.subBreed === secondDog.subBreed) {
        secondDog  = await getDogData();
     }
-    
+
     setDogDataArray([firstDog, secondDog])
-  }, [])
+  }, [setDogDataArray])
  
   useEffect(() => {
     fetchBothDogs();
   }, [fetchBothDogs])
   console.log("dogDataArray", dogDataArray)
 
-  return <>Vote Page</>;
+  //HANDLERS
+  const handleVoteClick = async (breed: string) => {
+    await axios.post(baseUrl + "/leaderboard", {"breed": breed});
+    await axios.put(baseUrl + "/leaderboard/" + breed);
+    fetchBothDogs();
+  }
+
+  if (dogDataArray.length > 0) {
+  return (
+  <>
+  <h1>Vote Page</h1>
+  <VoteCard DoggyData={dogDataArray[0]} handleVoteClick={handleVoteClick}/> 
+  <VoteCard DoggyData={dogDataArray[1]} handleVoteClick={handleVoteClick}/>
+  </>
+  );
+} else {
+  return <h1>Fetching Data</h1>
+}
 }
 
 
