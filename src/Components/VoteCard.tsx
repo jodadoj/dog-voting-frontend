@@ -10,13 +10,15 @@ export function VoteCard({DoggyData, handleVoteClick}: IVoteCardProps): JSX.Elem
  const combinedBreed = DoggyData.subBreed ? DoggyData.breed + " " + DoggyData.subBreed : DoggyData.breed;
 
   return (
-    <div className="ctn-VoteCard">
+    <div className="ctn-vote-card">
       <img
+      className="vote-card-img"
         src={DoggyData.message}
         alt={`${DoggyData.breed}`}
       />
       <p>{DoggyData.breed}</p>
       <button
+      className="vote-button"
         onClick={() => handleVoteClick(combinedBreed)}
         // onClick={() => console.log("Button Clicked")}
       >
