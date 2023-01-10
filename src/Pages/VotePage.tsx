@@ -8,3 +8,8 @@ export function VotePage():JSX.Element{
         </>
     );
 }
+
+
+function handleVoteClick(){
+    
+}
