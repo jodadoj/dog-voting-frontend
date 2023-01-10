@@ -9,9 +9,9 @@ export function VotePage(): JSX.Element {
   const [dogDataArray, setDogDataArray] = useState<IDogDataWithBreed[]>([]);
 
   async function getDogData() {
-    console.log("get Dog Data is RUNNING")
+    console.log("get Dog Data is RUNNING");
     const { data } = await axios.get("https://dog.ceo/api/breeds/image/random");
-    console.log("DATA", data)
+    console.log("DATA", data);
     return data;
   }
 
@@ -19,37 +19,44 @@ export function VotePage(): JSX.Element {
     const firstDog = getDogBreed(await getDogData());
 
     //While the second dog is the same breed as the first dog, continue fetching
-    let secondDog: IDogDataWithBreed  =  getDogBreed(await getDogData());
-    while (firstDog.breed === secondDog.breed && firstDog.subBreed === secondDog.subBreed) {
-       secondDog  = await getDogData();
+    let secondDog: IDogDataWithBreed = getDogBreed(await getDogData());
+    while (
+      firstDog.breed === secondDog.breed &&
+      firstDog.subBreed === secondDog.subBreed
+    ) {
+      secondDog = await getDogData();
     }
 
-    setDogDataArray([firstDog, secondDog])
-  }, [setDogDataArray])
- 
+    setDogDataArray([firstDog, secondDog]);
+  }, [setDogDataArray]);
+
   useEffect(() => {
     fetchBothDogs();
-  }, [fetchBothDogs])
-  console.log("dogDataArray", dogDataArray)
+  }, [fetchBothDogs]);
+  console.log("dogDataArray", dogDataArray);
 
   //HANDLERS
   const handleVoteClick = async (breed: string) => {
-    await axios.post(baseUrl + "leaderboard", {"breed": breed});
+    await axios.post(baseUrl + "leaderboard", { breed: breed });
     await axios.put(baseUrl + "leaderboard/" + breed);
     fetchBothDogs();
-  }
+  };
 
   if (dogDataArray.length > 0) {
-  return (
-  <>
-  <h1>Vote Page</h1>
-  <VoteCard DoggyData={dogDataArray[0]} handleVoteClick={handleVoteClick}/> 
-  <VoteCard DoggyData={dogDataArray[1]} handleVoteClick={handleVoteClick}/>
-  </>
-  );
-} else {
-  return <h1>Fetching Data</h1>
+    return (
+      <>
+        <h1>Vote Page</h1>
+        <VoteCard
+          DoggyData={dogDataArray[0]}
+          handleVoteClick={handleVoteClick}
+        />
+        <VoteCard
+          DoggyData={dogDataArray[1]}
+          handleVoteClick={handleVoteClick}
+        />
+      </>
+    );
+  } else {
+    return <h1>Fetching Data</h1>;
+  }
 }
-}
-
-
