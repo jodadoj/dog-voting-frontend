@@ -43,20 +43,15 @@ export function VotePage(): JSX.Element {
   };
 
   if (dogDataArray.length > 0) {
-    return (
-      <>
-        <h1>Vote Page</h1>
-        <VoteCard
-          DoggyData={dogDataArray[0]}
-          handleVoteClick={handleVoteClick}
-        />
-        <VoteCard
-          DoggyData={dogDataArray[1]}
-          handleVoteClick={handleVoteClick}
-        />
-      </>
-    );
-  } else {
-    return <h1>Fetching Data</h1>;
-  }
+  return (
+  <div className="ctn-vote-page">
+ 
+  <VoteCard DoggyData={dogDataArray[0]} handleVoteClick={handleVoteClick}/> 
+  <VoteCard DoggyData={dogDataArray[1]} handleVoteClick={handleVoteClick}/>
+  </div>
+
+  );
+} else {
+  return <h1>Fetching Data</h1>
+}
 }
