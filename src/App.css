@@ -1,50 +1,50 @@
 body {
-    margin: 0px;
-    background-color: whitesmoke;
+  margin: 0px;
+  background-color: whitesmoke;
 }
 
 .app {
-    margin-left: 50px;
-    margin-right: 50px;
-    text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
 }
 
 /*
 ========VoteCard=======
 */
 
-.ctn-vote-page{
-display: flex;
-justify-content: center;
+.ctn-vote-page {
+  display: flex;
+  justify-content: center;
 }
 
 .ctn-vote-card {
-border: solid 2px black;
-border-radius: 30px;
-margin: 5px 30px; 
-   width: 500px;
-   overflow: hidden;
-   text-align: center;
-   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-   transition: box-shadow 200ms;
+  border: solid 2px black;
+  border-radius: 30px;
+  margin: 5px 30px;
+  width: 500px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: box-shadow 200ms;
 }
 
 .ctn-vote-card:hover {
-    box-shadow: rgba(99, 99, 99, 0.699) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.699) 0px 2px 8px 0px;
 }
 
 .vote-card-img {
-    height: 400px;
+  height: 400px;
 }
 
 .vote-button {
-    background-color: inherit;
-    border: solid rgba(184, 184, 184, 0.76) 2px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: box-shadow 200ms;
+  background-color: inherit;
+  border: solid rgba(184, 184, 184, 0.76) 2px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: box-shadow 200ms;
 }
 
 .vote-button:hover {
-    border-color: rgba(138, 136, 136, 0.76);
+  border-color: rgba(138, 136, 136, 0.76);
 }

@@ -17,13 +17,13 @@ export function VoteCard({
   return (
     <div className="ctn-vote-card">
       <img
-      className="vote-card-img"
+        className="vote-card-img"
         src={DoggyData.message}
         alt={`${DoggyData.breed}`}
       />
       <p>{DoggyData.breed}</p>
       <button
-      className="vote-button"
+        className="vote-button"
         onClick={() => handleVoteClick(combinedBreed)}
         // onClick={() => console.log("Button Clicked")}
       >

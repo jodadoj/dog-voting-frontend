@@ -1,5 +1,5 @@
 import { VotePage } from "./Pages/VotePage";
-import "./App.css"
+import "./App.css";
 
 //--------------------------------------------------------------------------------the definition of the base URL
 
@@ -16,7 +16,7 @@ export const baseUrl: string =
 function App(): JSX.Element {
   return (
     <div className="app">
-    <h1>Dog Voting App</h1>
+      <h1>Dog Voting App</h1>
       <VotePage />
     </div>
   );
