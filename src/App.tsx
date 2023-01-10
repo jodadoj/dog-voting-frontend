@@ -1,7 +1,16 @@
-import { greet } from "./utils/greet";
+
+//--------------------------------------------------------------------------------the definition of the base URL
+
+export const baseUrl:string = process.env.NODE_ENV === "production"
+? "FILLL IN"
+: "http://localhost:4000/"
+
 
 function App(): JSX.Element {
-  return <h1>{greet("World")}</h1>;
+
+  return (
+    <></>
+  );
 }
 
 export default App;
