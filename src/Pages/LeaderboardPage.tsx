@@ -4,7 +4,7 @@ import { baseUrl } from "../App";
 import { ILeaderboard } from "../interfaces";
 
 export function LeaderboardPage(): JSX.Element {
-  const [top10Doggies, setTop10Doggies] = useState<ILeaderboard[]>();
+  const [top10Doggies, setTop10Doggies] = useState<ILeaderboard[]>([]);
 
   const fetchTop10Doggies = useCallback(async () => {
     try {
@@ -21,8 +21,10 @@ export function LeaderboardPage(): JSX.Element {
 
   return (
     <div className="ctn-leaderboard-page">
-      <div className="ctn-leaderboard">
-        <p>Top 10</p>
+      <p>Top 10</p>
+      <button className="btn-refresh-leaderboard" onClick={fetchTop10Doggies}>
+        refresh leaderboard
+      </button>
       <ol className="ctn-leaderboard">
         {top10Doggies.length > 0 &&
           top10Doggies.map((oneDog, index) => {
