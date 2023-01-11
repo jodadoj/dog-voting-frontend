@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah');
+
 body {
   margin: 0px;
   background-color: whitesmoke;
+  font-family: Gloria Hallelujah;
+}
+
+button {
+  font-family: Gloria Hallelujah;
 }
 
 .app {
@@ -65,4 +72,23 @@ body {
   color: black;
   text-decoration: none;
   font-weight: lighter;
+}
+
+
+/*
+========LeaderBoard=======
+*/
+
+.ctn-leaderboard {
+  width: fit-content;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.ctn-leaderboard-row {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: auto 10rem;
+  margin-bottom: 0px;
+  font-size: 1.5rem;
 }
