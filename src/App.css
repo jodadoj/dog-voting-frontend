@@ -48,3 +48,18 @@ body {
 .vote-button:hover {
   border-color: rgba(138, 136, 136, 0.76);
 }
+
+
+/*
+========NavBar=======
+*/
+
+.active-nav-link{
+  margin: 5px 30px;
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+.inactive-nav-link{
+  margin: 5px 30px;
+  color: black;
+}
