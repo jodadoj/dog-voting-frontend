@@ -9,10 +9,14 @@ export function VotePage(): JSX.Element {
   const [dogDataArray, setDogDataArray] = useState<IDogDataWithBreed[]>([]);
 
   async function getDogData() {
-    console.log("get Dog Data is RUNNING");
-    const { data } = await axios.get("https://dog.ceo/api/breeds/image/random");
-    console.log("DATA", data);
-    return data;
+    try {
+      const { data } = await axios.get(
+        "https://dog.ceo/api/breeds/image/random"
+      );
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const fetchBothDogs = useCallback(async () => {
