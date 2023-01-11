@@ -46,9 +46,8 @@ button {
 }
 
 .ctn-vote-card:hover .vote-card-img {
-  filter: brightness(60%)
+  filter: brightness(60%);
 }
-
 
 .vote-button {
   cursor: pointer;
