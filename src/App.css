@@ -64,10 +64,10 @@ button {
   margin-bottom: 2rem;
 }
 
-.active-nav-link, .inactive-nav-link {
+.active-nav-link,
+.inactive-nav-link {
   font-size: 2rem;
 }
-
 
 .active-nav-link {
   margin: 5px 30px;
@@ -107,11 +107,11 @@ button {
 
 .btn-refresh-leaderboard {
   border: solid 1px gray;
-  border-radius: 20px; 
+  border-radius: 20px;
   font-size: 1.2rem;
   background-color: rgb(238, 238, 238);
 }
 
 .btn-refresh-leaderboard:hover {
-background-color: rgb(235, 234, 234);
+  background-color: rgb(235, 234, 234);
 }
