@@ -1,6 +1,8 @@
 import { VotePage } from "./Pages/VotePage";
 import "./App.css";
 import { LeaderboardPage } from "./Pages/LeaderboardPage";
+import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //--------------------------------------------------------------------------------the definition of the base URL
 
@@ -18,8 +20,11 @@ function App(): JSX.Element {
   return (
     <div className="app">
       <h1>Dog Voting App</h1>
-      <VotePage />
-      <LeaderboardPage />
+      <nav className="navbar"></nav>
+      <Routes>
+        <Route path="/" element={<VotePage />} />
+        <Route path="/leaderboard" element={<LeaderboardPage />} />
+      </Routes>
     </div>
   );
 }
