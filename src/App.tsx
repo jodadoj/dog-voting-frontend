@@ -1,5 +1,6 @@
 import { VotePage } from "./Pages/VotePage";
 import "./App.css";
+import { LeaderboardPage } from "./Pages/LeaderboardPage";
 
 //--------------------------------------------------------------------------------the definition of the base URL
 
@@ -18,6 +19,7 @@ function App(): JSX.Element {
     <div className="app">
       <h1>Dog Voting App</h1>
       <VotePage />
+      <LeaderboardPage />
     </div>
   );
 }
