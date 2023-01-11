@@ -34,6 +34,7 @@ button {
   text-align: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: box-shadow 200ms;
+  position: relative;
 }
 
 .ctn-vote-card:hover {
@@ -44,16 +45,30 @@ button {
   height: 400px;
 }
 
+.ctn-vote-card:hover .vote-card-img {
+  filter: brightness(60%)
+}
+
+
 .vote-button {
-  background-color: inherit;
+  cursor: pointer;
+  background-color: white;
   border: solid rgba(184, 184, 184, 0.76) 2px;
   border-radius: 5px;
   margin-bottom: 10px;
   transition: box-shadow 200ms;
+  position: absolute;
+  bottom: 65px;
+  right: 200px;
+  display: none;
+}
+
+.ctn-vote-card:hover .vote-button {
+  display: inline;
 }
 
 .vote-button:hover {
-  border-color: rgba(138, 136, 136, 0.76);
+  border-color: rgba(33, 144, 255, 0.555);
 }
 
 /*
