@@ -2,7 +2,6 @@ import { VotePage } from "./Pages/VotePage";
 import "./App.css";
 import { LeaderboardPage } from "./Pages/LeaderboardPage";
 import { NavLink, Route, Routes } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 //-------------------------------------------------------------------------------the definition of the base URL
 
