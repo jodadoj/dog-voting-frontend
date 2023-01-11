@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah');
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah");
 
 body {
   margin: 0px;
@@ -73,7 +73,6 @@ button {
   text-decoration: none;
   font-weight: lighter;
 }
-
 
 /*
 ========LeaderBoard=======
