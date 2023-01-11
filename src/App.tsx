@@ -20,23 +20,18 @@ export const baseUrl: string =
 function App(): JSX.Element {
   return (
     <div className="app">
-
-{/* //---------------------------------------------------------------------------Header */}
+      {/* //---------------------------------------------------------------------------Header */}
       <h1>Dog Voting App</h1>
 
-{/* //---------------------------------------------------------------------------Navbar */}
+      {/* //---------------------------------------------------------------------------Navbar */}
 
       <nav className="navbar">
-        <Link to={"/"}>
-          Vote 
-        </Link>
-        <Link to={"/leaderboard"}>
-          Leaderboard 
-        </Link>
+        <Link to={"/"}>Vote</Link>
+        <Link to={"/leaderboard"}>Leaderboard</Link>
         {/* Add Links here */}
       </nav>
 
-{/* //---------------------------------------------------------------------------Routing */}
+      {/* //---------------------------------------------------------------------------Routing */}
 
       <Routes>
         <Route path="/" element={<VotePage />} />
