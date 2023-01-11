@@ -28,13 +28,17 @@ function App(): JSX.Element {
       <nav className="navbar">
         <NavLink
           to={"/"}
-          className={({ isActive }) => (isActive ? "active-nav-link" : "inactive-nav-link")}
+          className={({ isActive }) =>
+            isActive ? "active-nav-link" : "inactive-nav-link"
+          }
         >
           Vote
         </NavLink>
         <NavLink
           to={"/leaderboard"}
-          className={({ isActive }) => (isActive ? "active-nav-link" : "inactive-nav-link")}
+          className={({ isActive }) =>
+            isActive ? "active-nav-link" : "inactive-nav-link"
+          }
         >
           Leaderboard
         </NavLink>
