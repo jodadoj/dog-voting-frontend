@@ -21,14 +21,18 @@ export function VotePage(): JSX.Element {
 
   const fetchBothDogs = useCallback(async () => {
     const firstDog = getDogBreed(await getDogData());
+    // console.log('Set firstDog as ', firstDog);
 
     //While the second dog is the same breed as the first dog, continue fetching
     let secondDog: IDogDataWithBreed = getDogBreed(await getDogData());
+    // console.log('Set secondDog as ', firstDog);
     while (
       firstDog.breed === secondDog.breed &&
       firstDog.subBreed === secondDog.subBreed
     ) {
-      secondDog = await getDogData();
+      // console.log('Checked if same... they were', secondDog);
+      secondDog = getDogBreed(await getDogData());
+      // console.log('Changed secondDog to ', secondDog);
     }
 
     setDogDataArray([firstDog, secondDog]);
@@ -37,7 +41,7 @@ export function VotePage(): JSX.Element {
   useEffect(() => {
     fetchBothDogs();
   }, [fetchBothDogs]);
-  console.log("dogDataArray", dogDataArray);
+  // console.log("dogDataArray", dogDataArray);
 
   //HANDLERS
   const handleVoteClick = async (breed: string) => {
