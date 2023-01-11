@@ -21,7 +21,7 @@ export function LeaderboardPage(): JSX.Element {
 
   return (
     <div className="ctn-leaderboard-page">
-      <p>Top 10</p>
+      <p className="top-ten-txt">Top 10</p>
       <button className="btn-refresh-leaderboard" onClick={fetchTop10Doggies}>
         refresh leaderboard
       </button>

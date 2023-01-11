@@ -60,6 +60,15 @@ button {
 ========NavBar=======
 */
 
+.navbar {
+  margin-bottom: 2rem;
+}
+
+.active-nav-link, .inactive-nav-link {
+  font-size: 2rem;
+}
+
+
 .active-nav-link {
   margin: 5px 30px;
   color: hsla(0, 0%, 0%, 0.6);
@@ -84,10 +93,25 @@ button {
   margin-top: 20px;
 }
 
+.top-ten-txt {
+  font-size: 1.6rem;
+}
+
 .ctn-leaderboard-row {
   display: grid;
   gap: 2rem;
   grid-template-columns: auto 10rem;
   margin-bottom: 0px;
   font-size: 1.5rem;
+}
+
+.btn-refresh-leaderboard {
+  border: solid 1px gray;
+  border-radius: 20px; 
+  font-size: 1.2rem;
+  background-color: rgb(238, 238, 238);
+}
+
+.btn-refresh-leaderboard:hover {
+background-color: rgb(235, 234, 234);
 }

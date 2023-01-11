@@ -19,8 +19,6 @@ export const baseUrl: string =
 function App(): JSX.Element {
   return (
     <div className="app">
-      {/* //---------------------------------------------------------------------------Header */}
-      <h1>Dog Voting App</h1>
 
       {/* //---------------------------------------------------------------------------Navbar */}
 
