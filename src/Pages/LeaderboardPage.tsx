@@ -23,7 +23,17 @@ export function LeaderboardPage(): JSX.Element {
     <div className="ctn-leaderboard-page">
       <div className="ctn-leaderboard">
         <p>Top 10</p>
-      </div>
+      <ol className="ctn-leaderboard">
+        {top10Doggies.length > 0 &&
+          top10Doggies.map((oneDog, index) => {
+            return (
+              <li className="ctn-leaderboard-row" key={oneDog.breed}>
+                <div className="ctn-leaderboard-row-breed">{oneDog.breed}</div>
+                <div className="ctn-leaderboard-row-votes">{oneDog.votes}</div>
+              </li>
+            );
+          })}
+      </ol>
     </div>
   );
 }
