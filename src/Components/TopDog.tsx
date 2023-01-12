@@ -20,7 +20,7 @@ export function TopDog({ formattedBreed, votes }: TopDogProps): JSX.Element {
     } catch (error) {
       console.error(error);
     }
-  }, [setDogImage]);
+  }, [setDogImage, breedImageURL]);
 
   useEffect(() => {
     getDogImage();
