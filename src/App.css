@@ -52,7 +52,7 @@ button {
 .vote-button {
   cursor: pointer;
   background-color: inherit;
-  color:rgb(235, 234, 234);
+  color: rgb(235, 234, 234);
   border: solid rgba(184, 184, 184, 0.76) 2px;
   border-radius: 5px;
   margin-bottom: 10px;
