@@ -24,7 +24,7 @@ export function LeaderboardPage(): JSX.Element {
   if (top10Doggies.length > 0) {
     return (
       <div className="ctn-leaderboard-page">
-        <div>
+        <div className="ctn-podium">
           <TopDog
             formattedBreed={top10Doggies[0].breed}
             votes={top10Doggies[0].votes}
@@ -74,6 +74,7 @@ export function LeaderboardPage(): JSX.Element {
   } else {
     return (
       <div className={"loading-icon"}>
+        <h1>Fetching Data</h1>;
         <LoadingSpin />
       </div>
     );

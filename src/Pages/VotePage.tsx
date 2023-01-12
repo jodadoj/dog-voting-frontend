@@ -4,6 +4,7 @@ import { baseUrl } from "../App";
 import { VoteCard } from "../Components/VoteCard";
 import { IDogDataWithBreed } from "../interfaces";
 import { getDogBreed } from "../utils/getDogBreed";
+import LoadingSpin from "react-loading-spin";
 
 export function VotePage(): JSX.Element {
   const [dogDataArray, setDogDataArray] = useState<IDogDataWithBreed[]>([]);
@@ -64,6 +65,11 @@ export function VotePage(): JSX.Element {
       </div>
     );
   } else {
-    return <h1>Fetching Data</h1>;
+    return (
+    <div className={"loading-icon"}>
+      <h1>Fetching Data</h1>;
+      <LoadingSpin />
+    </div>
+    );
   }
 }
