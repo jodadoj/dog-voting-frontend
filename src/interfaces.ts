@@ -3,12 +3,12 @@ export interface IDogDataFromAPI {
   status: string;
 }
 
-export interface ILeaderboard {
-  breed: string;
-  votes: number;
-}
-
 export interface IDogDataWithBreed extends IDogDataFromAPI {
   breed: string;
   subBreed: string | null;
+}
+
+export interface ILeaderboard {
+  breed: string;
+  votes: number;
 }
