@@ -25,12 +25,21 @@ export function LeaderboardPage(): JSX.Element {
     return (
       <div className="ctn-leaderboard-page">
         <div>
-          <TopDog formattedBreed={top10Doggies[0].breed} />
+          <TopDog
+            formattedBreed={top10Doggies[0].breed}
+            votes={top10Doggies[0].votes}
+          />
           {top10Doggies.length > 1 && (
-            <TopDog formattedBreed={top10Doggies[1].breed} />
+            <TopDog
+              formattedBreed={top10Doggies[1].breed}
+              votes={top10Doggies[1].votes}
+            />
           )}
           {top10Doggies.length > 2 && (
-            <TopDog formattedBreed={top10Doggies[2].breed} />
+            <TopDog
+              formattedBreed={top10Doggies[2].breed}
+              votes={top10Doggies[2].votes}
+            />
           )}
         </div>
         <p className="top-ten-txt">Top 10</p>

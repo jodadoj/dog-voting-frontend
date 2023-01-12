@@ -5,9 +5,10 @@ import getTopDogPath from "../utils/getTopDogPath";
 
 interface TopDogProps {
   formattedBreed: string;
+  votes: number;
 }
 
-export function TopDog({ formattedBreed }: TopDogProps): JSX.Element {
+export function TopDog({ formattedBreed, votes }: TopDogProps): JSX.Element {
   const breedImageURL = getTopDogPath(formattedBreed);
   const [dogImage, setDogImage] = useState<string>();
 
@@ -34,7 +35,8 @@ export function TopDog({ formattedBreed }: TopDogProps): JSX.Element {
           alt={`${formattedBreed}`}
           onClick={() => getDogImage()}
         />
-        <p className="top-dog-name">{formattedBreed}</p>
+        <p className="top-dog-name">{formattedBreed}</p>{" "}
+        <p className="top-dog-votes">{votes} votes</p>
       </div>
     </>
   );
