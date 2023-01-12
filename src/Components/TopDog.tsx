@@ -9,7 +9,11 @@ interface TopDogProps {
   placing: string;
 }
 
-export function TopDog({ formattedBreed, votes, placing }: TopDogProps): JSX.Element {
+export function TopDog({
+  formattedBreed,
+  votes,
+  placing,
+}: TopDogProps): JSX.Element {
   const breedImageURL = getTopDogPath(formattedBreed);
   const [dogImage, setDogImage] = useState<string>();
 
@@ -29,11 +33,10 @@ export function TopDog({ formattedBreed, votes, placing }: TopDogProps): JSX.Ele
 
   return (
     <>
-      <div className=
-      { placing === "🥇" ? "ctn-top-dog-first" : "ctn-top-dog"}>
+      <div className={placing === "🥇" ? "ctn-top-dog-first" : "ctn-top-dog"}>
         <p className="medal">{placing}</p>
         <img
-          className={ placing === "🥇" ? "top-dog-first-img" : "top-dog-img"}
+          className={placing === "🥇" ? "top-dog-first-img" : "top-dog-img"}
           src={dogImage}
           alt={`${formattedBreed}`}
           onClick={() => getDogImage()}

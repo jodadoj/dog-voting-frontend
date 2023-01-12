@@ -34,7 +34,7 @@ export function LeaderboardPage(): JSX.Element {
           )}
           <TopDog
             formattedBreed={top10Doggies[0].breed}
-            votes={top10Doggies[0].votes} 
+            votes={top10Doggies[0].votes}
             placing={"🥇"}
           />
           {top10Doggies.length > 2 && (
