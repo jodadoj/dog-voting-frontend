@@ -21,6 +21,9 @@ export function LeaderboardPage(): JSX.Element {
     fetchTop10Doggies();
   }, [fetchTop10Doggies]);
 
+  if (top10Doggies.length > 0) {
+    return (
+      <div className="ctn-leaderboard-page">
         <div>
           <TopDog formattedBreed={top10Doggies[0].breed} />
           {top10Doggies.length > 1 && (
@@ -30,6 +33,35 @@ export function LeaderboardPage(): JSX.Element {
             <TopDog formattedBreed={top10Doggies[2].breed} />
           )}
         </div>
+        <p className="top-ten-txt">Top 10</p>
+        <button className="btn-refresh-leaderboard" onClick={fetchTop10Doggies}>
+          refresh leaderboard
+        </button>
+        <div className="ctn-leaderboard">
+          <div className="ctn-leaderboard-row">
+            <div className="ctn-leaderboard-row-breed">
+              <b>Dog</b>
+            </div>
+            <div className="ctn-leaderboard-row-votes">
+              <b>Votes</b>
+            </div>
+          </div>
+          {top10Doggies.length > 0 &&
+            top10Doggies.map((oneDog, index) => {
+              return (
+                <div className="ctn-leaderboard-row" key={oneDog.breed}>
+                  <div className="ctn-leaderboard-row-breed">
+                    {oneDog.breed}
+                  </div>
+                  <div className="ctn-leaderboard-row-votes">
+                    {oneDog.votes}
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      </div>
+    );
   } else {
     return (
       <div className={"loading-icon"}>
