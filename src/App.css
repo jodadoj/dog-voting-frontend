@@ -40,6 +40,7 @@ button {
 .vote-card-img {
   border-radius: 20px;
   height: 400px;
+  max-width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -131,4 +132,74 @@ button {
 
 .btn-refresh-leaderboard:hover {
   background-color: rgb(235, 234, 234);
+}
+
+/*
+========TopDog=======
+*/
+
+.ctn-podium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctn-top-dog-first {
+  /* border: solid 2px black; */
+  /* border-radius: 30px; */
+  background-color: whitesmoke;
+  margin: 5px 30px;
+  width: 600px;
+  overflow: hidden;
+  text-align: center;
+  transition: box-shadow 200ms;
+  position: relative;
+  font-size: 2rem;
+}
+
+.ctn-top-dog {
+  /* border: solid 2px black; */
+  /* border-radius: 30px; */
+  background-color: whitesmoke;
+  margin: 5px 30px;
+  width: 500px;
+  overflow: hidden;
+  text-align: center;
+  transition: box-shadow 200ms;
+  position: relative;
+  font-size: 2rem;
+}
+
+.top-dog-first-img {
+  border-radius: 20px;
+  height: 500px;
+  max-width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.top-dog-img {
+  border-radius: 20px;
+  height: 400px;
+  max-width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.ctn-top-dog:hover .top-dog-img {
+  filter: brightness(60%);
+}
+
+.medal {
+  font-size: 3rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.top-dog-name {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.top-dog-votes {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }

@@ -24,21 +24,24 @@ export function LeaderboardPage(): JSX.Element {
   if (top10Doggies.length > 0) {
     return (
       <div className="ctn-leaderboard-page">
-        <div>
-          <TopDog
-            formattedBreed={top10Doggies[0].breed}
-            votes={top10Doggies[0].votes}
-          />
+        <div className="ctn-podium">
           {top10Doggies.length > 1 && (
             <TopDog
               formattedBreed={top10Doggies[1].breed}
               votes={top10Doggies[1].votes}
+              placing={"🥈"}
             />
           )}
+          <TopDog
+            formattedBreed={top10Doggies[0].breed}
+            votes={top10Doggies[0].votes}
+            placing={"🥇"}
+          />
           {top10Doggies.length > 2 && (
             <TopDog
               formattedBreed={top10Doggies[2].breed}
               votes={top10Doggies[2].votes}
+              placing={"🥉"}
             />
           )}
         </div>
@@ -74,6 +77,7 @@ export function LeaderboardPage(): JSX.Element {
   } else {
     return (
       <div className={"loading-icon"}>
+        <h1>Fetching Data</h1>;
         <LoadingSpin />
       </div>
     );
