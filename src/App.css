@@ -114,6 +114,7 @@ button {
 
 .top-ten-txt {
   font-size: 1.6rem;
+  border-top: 0.15rem gray solid;
 }
 
 .ctn-leaderboard-row {
@@ -163,7 +164,7 @@ button {
   /* border-radius: 30px; */
   background-color: whitesmoke;
   margin: 5px 30px;
-  width: 500px;
+  width: 400px;
   overflow: hidden;
   text-align: center;
   transition: box-shadow 200ms;
@@ -173,14 +174,14 @@ button {
 
 .top-dog-first-img {
   border-radius: 20px;
-  height: 500px;
+  height: 400px;
   max-width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .top-dog-img {
   border-radius: 20px;
-  height: 400px;
+  height: 300px;
   max-width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
