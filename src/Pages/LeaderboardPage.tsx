@@ -30,4 +30,11 @@ export function LeaderboardPage(): JSX.Element {
             <TopDog formattedBreed={top10Doggies[2].breed} />
           )}
         </div>
+  } else {
+    return (
+      <div className={"loading-icon"}>
+        <LoadingSpin />
+      </div>
+    );
+  }
 }
