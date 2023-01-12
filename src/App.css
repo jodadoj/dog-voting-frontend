@@ -188,6 +188,10 @@ button {
   filter: brightness(60%);
 }
 
+.ctn-top-dog-first:hover .top-dog-first-img {
+  filter: brightness(60%);
+}
+
 .medal {
   font-size: 3rem;
   margin-top: 0px;
