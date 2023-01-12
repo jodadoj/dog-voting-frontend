@@ -26,23 +26,21 @@ button {
 }
 
 .ctn-vote-card {
-  border: solid 2px black;
-  border-radius: 30px;
+  /* border: solid 2px black; */
+  /* border-radius: 30px; */
+  background-color: whitesmoke;
   margin: 5px 30px;
   width: 500px;
   overflow: hidden;
   text-align: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: box-shadow 200ms;
   position: relative;
 }
 
-.ctn-vote-card:hover {
-  box-shadow: rgba(99, 99, 99, 0.699) 0px 2px 8px 0px;
-}
-
 .vote-card-img {
+  border-radius: 20px;
   height: 400px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .ctn-vote-card:hover .vote-card-img {
@@ -51,7 +49,7 @@ button {
 
 .vote-button {
   cursor: pointer;
-  background-color: inherit;
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(235, 234, 234);
   border: solid rgba(184, 184, 184, 0.76) 2px;
   border-radius: 5px;
