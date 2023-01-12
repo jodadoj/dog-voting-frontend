@@ -2,6 +2,8 @@ import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { baseUrl } from "../App";
 import { ILeaderboard } from "../interfaces";
+import LoadingSpin from "react-loading-spin";
+import { TopDog } from "../Components/TopDog";
 
 export function LeaderboardPage(): JSX.Element {
   const [top10Doggies, setTop10Doggies] = useState<ILeaderboard[]>([]);
