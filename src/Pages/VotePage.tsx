@@ -66,10 +66,10 @@ export function VotePage(): JSX.Element {
     );
   } else {
     return (
-    <div className={"loading-icon"}>
-      <h1>Fetching Data</h1>;
-      <LoadingSpin />
-    </div>
+      <div className={"loading-icon"}>
+        <h1>Fetching Data</h1>;
+        <LoadingSpin />
+      </div>
     );
   }
 }

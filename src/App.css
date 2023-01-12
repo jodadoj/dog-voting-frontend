@@ -138,12 +138,12 @@ button {
 ========TopDog=======
 */
 
-.ctn-podium{
+.ctn-podium {
   display: flex;
   justify-content: center;
 }
 
-.ctn-top-dog{
+.ctn-top-dog {
   /* border: solid 2px black; */
   /* border-radius: 30px; */
   background-color: whitesmoke;
