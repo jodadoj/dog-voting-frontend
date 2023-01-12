@@ -25,20 +25,23 @@ export function LeaderboardPage(): JSX.Element {
     return (
       <div className="ctn-leaderboard-page">
         <div className="ctn-podium">
-          <TopDog
-            formattedBreed={top10Doggies[0].breed}
-            votes={top10Doggies[0].votes}
-          />
           {top10Doggies.length > 1 && (
             <TopDog
               formattedBreed={top10Doggies[1].breed}
               votes={top10Doggies[1].votes}
+              placing={"🥈"}
             />
           )}
+          <TopDog
+            formattedBreed={top10Doggies[0].breed}
+            votes={top10Doggies[0].votes} 
+            placing={"🥇"}
+          />
           {top10Doggies.length > 2 && (
             <TopDog
               formattedBreed={top10Doggies[2].breed}
               votes={top10Doggies[2].votes}
+              placing={"🥉"}
             />
           )}
         </div>
