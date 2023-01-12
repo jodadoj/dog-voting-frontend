@@ -21,21 +21,29 @@ export function LeaderboardPage(): JSX.Element {
 
   return (
     <div className="ctn-leaderboard-page">
-      <p>Top 10</p>
+      <p className="top-ten-txt">Top 10</p>
       <button className="btn-refresh-leaderboard" onClick={fetchTop10Doggies}>
         refresh leaderboard
       </button>
-      <ol className="ctn-leaderboard">
+      <div className="ctn-leaderboard">
+        <div className="ctn-leaderboard-row">
+          <div className="ctn-leaderboard-row-breed">
+            <b>Dog</b>
+          </div>
+          <div className="ctn-leaderboard-row-votes">
+            <b>Votes</b>
+          </div>
+        </div>
         {top10Doggies.length > 0 &&
           top10Doggies.map((oneDog, index) => {
             return (
-              <li className="ctn-leaderboard-row" key={oneDog.breed}>
+              <div className="ctn-leaderboard-row" key={oneDog.breed}>
                 <div className="ctn-leaderboard-row-breed">{oneDog.breed}</div>
                 <div className="ctn-leaderboard-row-votes">{oneDog.votes}</div>
-              </li>
+              </div>
             );
           })}
-      </ol>
+      </div>
     </div>
   );
 }
