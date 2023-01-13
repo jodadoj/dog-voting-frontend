@@ -56,6 +56,7 @@ function App(): JSX.Element {
         <Route path="/" element={<VotePage />} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />
       </Routes>
+      <h4>topdogs INC ©</h4>
     </div>
   );
 }
