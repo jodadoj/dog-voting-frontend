@@ -25,7 +25,7 @@ button {
 
 .welcome-msg-txt {
   font-size: 2.2rem;
-  color:rgba(33, 144, 255, 0.555);
+  color: rgba(33, 144, 255, 0.555);
   margin-top: 0px;
 }
 .ctn-vote-cards {
@@ -35,7 +35,6 @@ button {
 /*
 ========VoteCard=======
 */
-
 
 .ctn-vote-card {
   background-color: whitesmoke;
@@ -127,16 +126,17 @@ button {
   margin-top: 20px;
 }
 
-.top-ten-txt, .top-dogs-txt {
+.top-ten-txt,
+.top-dogs-txt {
   font-size: 2.5rem;
-  color:rgba(33, 144, 255, 0.555);
+  color: rgba(33, 144, 255, 0.555);
   margin-bottom: 0;
   margin-top: 0px;
   padding-top: 0px;
 }
 
 .top-ten-txt {
-  border-top: 0.10rem rgba(128, 128, 128, 0.418) solid;
+  border-top: 0.1rem rgba(128, 128, 128, 0.418) solid;
 }
 
 .ctn-leaderboard-row {
