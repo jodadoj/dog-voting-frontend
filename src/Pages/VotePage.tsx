@@ -54,6 +54,8 @@ export function VotePage(): JSX.Element {
   if (dogDataArray.length > 0) {
     return (
       <div className="ctn-vote-page">
+        <p className="welcome-msg-txt">Vote for your favourite dog!</p>
+      <div className="ctn-vote-cards">
         <VoteCard
           DoggyData={dogDataArray[0]}
           handleVoteClick={handleVoteClick}
@@ -62,6 +64,7 @@ export function VotePage(): JSX.Element {
           DoggyData={dogDataArray[1]}
           handleVoteClick={handleVoteClick}
         />
+      </div>
       </div>
     );
   } else {
