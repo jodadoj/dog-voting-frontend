@@ -24,6 +24,7 @@ export function LeaderboardPage(): JSX.Element {
   if (top10Doggies.length > 0) {
     return (
       <div className="ctn-leaderboard-page">
+        <p className="top-dogs-txt">Top Dogs</p>
         <div className="ctn-podium">
           {top10Doggies.length > 1 && (
             <TopDog

@@ -17,17 +17,26 @@ button {
 }
 
 /*
-========VoteCard=======
+========VotePage=======
 */
-
 .ctn-vote-page {
+  margin: 0;
+}
+
+.welcome-msg-txt {
+  font-size: 2.2rem;
+  color: rgba(33, 144, 255, 0.555);
+  margin-top: 0px;
+}
+.ctn-vote-cards {
   display: flex;
   justify-content: center;
 }
+/*
+========VoteCard=======
+*/
 
 .ctn-vote-card {
-  /* border: solid 2px black; */
-  /* border-radius: 30px; */
   background-color: whitesmoke;
   margin: 5px 30px;
   width: 500px;
@@ -42,10 +51,19 @@ button {
   height: 400px;
   max-width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 100ms;
+}
+
+.vote-card-breed-txt {
+  font-size: 1.5rem;
 }
 
 .ctn-vote-card:hover .vote-card-img {
   filter: brightness(60%);
+}
+
+.ctn-vote-card:hover .vote-button {
+  display: inline;
 }
 
 .vote-button {
@@ -60,10 +78,7 @@ button {
   bottom: 50%;
   right: 200px;
   display: none;
-}
-
-.ctn-vote-card:hover .vote-button {
-  display: inline;
+  transition: 150ms;
 }
 
 .vote-button:hover {
@@ -79,7 +94,7 @@ button {
 */
 
 .navbar {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .active-nav-link,
@@ -105,16 +120,23 @@ button {
 /*
 ========LeaderBoard=======
 */
-
 .ctn-leaderboard {
   width: fit-content;
   margin: auto;
   margin-top: 20px;
 }
 
+.top-ten-txt,
+.top-dogs-txt {
+  font-size: 2.5rem;
+  color: rgba(33, 144, 255, 0.555);
+  margin-bottom: 0;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 .top-ten-txt {
-  font-size: 1.6rem;
-  border-top: 0.15rem gray solid;
+  border-top: 0.1rem rgba(128, 128, 128, 0.418) solid;
 }
 
 .ctn-leaderboard-row {
@@ -147,8 +169,6 @@ button {
 }
 
 .ctn-top-dog-first {
-  /* border: solid 2px black; */
-  /* border-radius: 30px; */
   background-color: whitesmoke;
   margin: 5px 30px;
   width: 600px;
@@ -160,8 +180,6 @@ button {
 }
 
 .ctn-top-dog {
-  /* border: solid 2px black; */
-  /* border-radius: 30px; */
   background-color: whitesmoke;
   margin: 5px 30px;
   width: 400px;
@@ -176,22 +194,24 @@ button {
   border-radius: 20px;
   height: 400px;
   max-width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.267) 0px 2px 8px 0px;
+  transition: filter 50ms;
 }
 
 .top-dog-img {
   border-radius: 20px;
   height: 300px;
   max-width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.267) 0px 2px 8px 0px;
+  transition: filter 50ms;
 }
 
 .ctn-top-dog:hover .top-dog-img {
-  filter: brightness(60%);
+  filter: brightness(90%);
 }
 
 .ctn-top-dog-first:hover .top-dog-first-img {
-  filter: brightness(60%);
+  filter: brightness(90%);
 }
 
 .medal {
@@ -203,6 +223,7 @@ button {
 .top-dog-name {
   margin-top: 0rem;
   margin-bottom: 0rem;
+  font-weight: 600;
 }
 
 .top-dog-votes {
