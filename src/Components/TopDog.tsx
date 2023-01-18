@@ -47,8 +47,3 @@ export function TopDog({
     </>
   );
 }
-
-//https://dog.ceo/api/breed/hound/afghan/images/random
-//https://dog.ceo/api/breed/african/images/random
-
-//PATH: https://dog.ceo/api/breed/BREED/?SUBBREED?/images/random
